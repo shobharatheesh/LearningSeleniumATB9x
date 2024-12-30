@@ -1,4 +1,4 @@
-package com.testingacademy.ex04_Selenium_Mini_Project1;
+package com.testingacademy.ex04_Selenium_Mini_Projects;
 
 import io.qameta.allure.Description;
 import org.openqa.selenium.By;
