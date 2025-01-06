@@ -46,8 +46,9 @@ public class SeleniumProject3 {
         // value="true"
         // data-qa="page-gdpr-consent-checkbox"
         // data-gtm-form-interact-field-id="1">
+        //xpth for check box ---> //input[@name="gdpr_consent_checkbox"]
 
-        WebElement checkbox = driver.findElement(By.id("page-264cu-gdpr-consent-checkbox"));
+        WebElement checkbox = driver.findElement(By.name("gdpr_consent_checkbox"));
         checkbox.click();
 
         //find the create account button and then click on the button

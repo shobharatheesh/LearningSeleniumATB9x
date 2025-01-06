@@ -9,7 +9,7 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class SeleniumKatalonProject4 {
+public class SeleniumKatalonProject8 {
 
     @Description("Open the Katalon URL")
     @Test
