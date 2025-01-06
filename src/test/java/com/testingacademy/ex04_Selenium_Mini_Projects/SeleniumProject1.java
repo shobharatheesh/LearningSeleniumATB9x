@@ -6,8 +6,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.time.Duration;
 
 public class SeleniumProject1 {
 
@@ -62,8 +66,7 @@ public class SeleniumProject1 {
         WebElement signinButton = driver.findElement(By.id("js-login-btn"));
         signinButton.click();
 
-        Thread.sleep(3000);
-
+        //Thread.sleep(3000);
 
         //4.Find the invalid error message and verify
 
@@ -74,6 +77,21 @@ public class SeleniumProject1 {
 
         //WebElement errorMessage = driver.findElement(By.id("js-notification-box-msg"));
         WebElement errorMessage = driver.findElement(By.className("notification-box-description"));
+
+        //visibility of the error message is visible or element should be visible
+        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(3));
+        wait1.until((ExpectedConditions.visibilityOf(errorMessage)));
+
+        //condition -->Explicit wait untill message is displayed or element should have the text
+        WebDriverWait wait2 =  new WebDriverWait(driver, Duration.ofSeconds(3));
+        wait2.until(ExpectedConditions.textToBePresentInElement(errorMessage,"Your email, password, IP address or location did not match"));
+
+      //or
+        //WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(3));
+        //wait1.until((ExpectedConditions.visibilityOf(errorMessage)));
+        //wait2.until(ExpectedConditions.textToBePresentInElement(errorMessage,"Your email, password, IP address or location did not match"));
+
+
 
         Assert.assertEquals(errorMessage.getText(),"Your email, password, IP address or location did not match");
 
