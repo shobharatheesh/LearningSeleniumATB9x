@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class Selenium18FileUpload {
 
-    //makemytrip example
+    //Browserstack example
 
     ChromeDriver driver;
 
@@ -40,13 +40,6 @@ public class Selenium18FileUpload {
         login.click();
 
         Thread.sleep(5000);
-
-
-
-
-
-
-
 
 
           }

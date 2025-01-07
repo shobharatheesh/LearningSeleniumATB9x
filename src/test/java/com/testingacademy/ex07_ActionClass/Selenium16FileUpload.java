@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 public class Selenium16FileUpload {
 
-    //makemytrip example
+    //the-internet.herokuapp.com example
 
     EdgeDriver driver;
 

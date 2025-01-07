@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 public class Selenium17FileUpload {
 
-    //makemytrip example
+    //awesomeqa.com example
 
     EdgeDriver driver;
 
