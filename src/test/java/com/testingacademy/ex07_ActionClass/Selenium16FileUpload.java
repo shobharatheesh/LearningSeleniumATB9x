@@ -39,18 +39,20 @@ public class Selenium16FileUpload {
         file_upload.sendKeys(working_dir + "/src/test/java/com/testingacademy/ex07_ActionClass/AdBlock.crx");
         driver.findElement(By.id("file-submit")).click();
 
+        Thread.sleep(3000);
 
-        
-        
+        WebElement text = driver.findElement(By.className("example"));
+        text.getText();
+        System.out.println(text.getText());
 
-
-
-
-
-
-
-
-
+        if(text.getText().contains("File Uploaded!"))
+        {
+            System.out.println("Text is visible");
+        }
+        else
+        {
+            System.out.println("Text is not visible");
+        }
 
 
     }
