@@ -11,7 +11,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class Selenium15 {
+public class Selenium15MakeMyTrip {
 
     //makemytrip example
 
@@ -39,7 +39,13 @@ public class Selenium15 {
         close_modal.click();
 
        WebElement from_city = driver.findElement(By.xpath("//input[@id='fromCity']"));
-       from_city.sendKeys("del");
+       from_city.click();
+
+       Thread.sleep(3000);
+
+       WebElement from = driver.findElement(By.xpath("//input[@placeholder='From']"));
+       from.sendKeys("del");
+
 
        Actions actions = new Actions(driver);
        Thread.sleep(3000);

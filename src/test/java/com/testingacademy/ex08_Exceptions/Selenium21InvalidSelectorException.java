@@ -1,17 +1,15 @@
-package com.testingacademy.ex07_ActionClassAdvance;
+package com.testingacademy.ex08_Exceptions;
 
 import io.qameta.allure.Description;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class Selenium20CRM {
+public class Selenium21InvalidSelectorException {
 
     //Orange CRM example
 
@@ -34,7 +32,9 @@ public class Selenium20CRM {
 
         Thread.sleep(3000);
 
-        WebElement  username = driver.findElement(By.xpath("//input[@placeholder='Username']"));
+        //give wrong syntax of xpath, then we get the invalid selector exception
+
+        WebElement  username = driver.findElement(By.xpath("//input[@placeholder='Username'][1000"));
         username.sendKeys("Admin");
 
         WebElement  password = driver.findElement(By.name("password"));
@@ -50,12 +50,16 @@ public class Selenium20CRM {
         driver.getTitle();
         System.out.println(driver.getTitle());
 
-        WebElement user = driver.findElement(By.xpath("//input[@placeholder='Type for hints...']"));
-        user.sendKeys("sree");
 
-        Actions actions = new Actions(driver);
-        Thread.sleep(3000);
-        actions.moveToElement(user).keyDown(Keys.ARROW_DOWN).keyDown(Keys.ENTER).perform();
+
+
+
+
+
+
+
+
+
 
 
     }
