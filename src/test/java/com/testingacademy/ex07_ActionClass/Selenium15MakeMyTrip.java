@@ -44,7 +44,7 @@ public class Selenium15MakeMyTrip {
        Thread.sleep(3000);
 
        WebElement from = driver.findElement(By.xpath("//input[@placeholder='From']"));
-       from.sendKeys("del");
+       from.sendKeys("bkk");
 
 
        Actions actions = new Actions(driver);
