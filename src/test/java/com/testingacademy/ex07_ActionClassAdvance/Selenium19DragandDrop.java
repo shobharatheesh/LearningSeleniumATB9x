@@ -1,15 +1,13 @@
-package com.testingacademy.ex08_Exceptions;
+package com.testingacademy.ex07_ActionClassAdvance;
 
 import io.qameta.allure.Description;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class SeleniumInvalidArgumentException {
+public class Selenium19DragandDrop {
 
     EdgeDriver driver;
 
@@ -25,28 +23,8 @@ public class SeleniumInvalidArgumentException {
     @Test
     public void test_actions() throws Exception {
 
-        driver.get("https://awesomeqa.com/selenium/upload.html");
+        driver.get("https://the-internet.herokuapp.com/drag_and_drop");
         driver.manage().window().maximize();
-
-        WebElement file_upload =driver.findElement(By.id("fileToUpload"));
-
-        String working_dir = System.getProperty("user.dir");
-        System.out.println(working_dir);
-
-        // if path we entered is not correct then it shows InvalidArgumentException(Ex: "src" it should be "/src
-
-        file_upload.sendKeys(working_dir + "src/test/java/com/testingacademy/ex07_ActionClassAdvance/AdBlock.crx");
-
-
-
-
-
-
-
-
-
-
-
 
 
 
