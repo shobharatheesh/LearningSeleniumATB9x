@@ -22,7 +22,9 @@ public class Selenium20CRM {
 
         EdgeOptions edgeOptions = new EdgeOptions();
         edgeOptions.addArguments("---guest");
+        edgeOptions.setAcceptInsecureCerts(true); //accepts insecure certificates
         driver = new EdgeDriver(edgeOptions);
+
     }
 
     @Description

@@ -73,7 +73,9 @@ public class SeleniumProject1 {
 
         //WebElement errorMessage = driver.findElement(By.id("js-notification-box-msg"));
         WebElement errorMessage = driver.findElement(By.className("notification-box-description"));
+        System.out.println(errorMessage.getText());
         Assert.assertEquals(errorMessage.getText(),"Your email, password, IP address or location did not match");
+
 
         Thread.sleep(3000);
         driver.quit(); // It will close all the tabs. - session id == null

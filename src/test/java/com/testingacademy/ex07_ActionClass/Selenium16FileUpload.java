@@ -9,7 +9,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class Selenium16FileUpload {
+public class
+Selenium16FileUpload {
 
     //the-internet.herokuapp.com example
 
