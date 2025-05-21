@@ -96,6 +96,7 @@ public class SeleniumProject7Waits {
         Assert.assertEquals(errorMessage.getText(),"Your email, password, IP address or location did not match");
 
         Thread.sleep(3000);
+
         driver.quit(); // It will close all the tabs. - session id == null
 
     }
