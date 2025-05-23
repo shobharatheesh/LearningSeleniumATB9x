@@ -40,31 +40,7 @@ public class Selenium17FileUpload {
         driver.findElement(By.xpath("//input[@name=\"submit\"]")).click();
 
 
-
-
-
-        
-        
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
 
 
    @AfterTest
